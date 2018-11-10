@@ -27,10 +27,13 @@ public class Main {
         try {
             ExecutorService executor = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
 
-            for(int i = 0; i < Runtime.getRuntime().availableProcessors(); i++) {
+            for(int i = 0; i < Runtime.getRuntime().availableProcessors() - 1; i++) {
                 Customer customer = new Customer(i, hashTable);
                 executor.execute(customer);
             }
+
+            Vendor vendor = new Vendor(1, hashTable);
+            executor.execute(vendor);
 
             executor.awaitTermination(60, TimeUnit.SECONDS);
             executor.shutdownNow();

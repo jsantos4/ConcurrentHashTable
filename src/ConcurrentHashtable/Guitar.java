@@ -1,8 +1,10 @@
 package ConcurrentHashtable;
 
+import java.awt.*;
 import java.text.NumberFormat;
 import java.text.ParseException;
 import java.util.Locale;
+import java.util.Random;
 
 public class Guitar {
     private String name;
@@ -39,6 +41,19 @@ public class Guitar {
         } catch (ParseException e) {
             e.printStackTrace();
         }
+    }
+
+    //Randomly change price of item (for vendors)
+    double changePrice() {
+        Random random = new Random();
+        int delta = random.nextInt(100);
+        if (random.nextInt(2) == 1) {
+            price = price + delta;
+        } else {
+            price = price - delta;
+        }
+
+        return price;
     }
 
     public String toString() {
