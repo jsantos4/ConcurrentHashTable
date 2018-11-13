@@ -1,4 +1,6 @@
-package ConcurrentHashtable;
+package CustomImplamentation;
+
+import Objects.*;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -9,7 +11,7 @@ import java.util.*;
 
 class Parser {
 
-    static void parse(String page, HashTable guitars) throws IOException {
+    public static void parse(String page, HashTable guitars) throws IOException {
 
         Document document;
         Guitar guitar;

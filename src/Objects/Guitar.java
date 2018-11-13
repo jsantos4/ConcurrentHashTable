@@ -1,6 +1,5 @@
-package ConcurrentHashtable;
+package Objects;
 
-import java.awt.*;
 import java.text.NumberFormat;
 import java.text.ParseException;
 import java.util.Locale;
@@ -11,29 +10,29 @@ public class Guitar {
     private double price;
 
 
-    Guitar() {
+    public Guitar() {
         name = "";
         price = 0.0;
     }
 
     //Getters
 
-    String getName() {
+    public String getName() {
         return name;
     }
 
-    double getPrice() {
+    public double getPrice() {
         return price;
     }
 
 
     //Setters
 
-    void setName(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 
-    void setPrice(String price) {
+    public void setPrice(String price) {
         NumberFormat format = NumberFormat.getCurrencyInstance(Locale.US);
         try {
             Number number = format.parse(price);
@@ -44,7 +43,7 @@ public class Guitar {
     }
 
     //Randomly change price of item (for vendors)
-    double changePrice() {
+    public double changePrice() {
         Random random = new Random();
         int delta = random.nextInt(100);
         if (random.nextInt(2) == 1) {

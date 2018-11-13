@@ -1,4 +1,6 @@
-package ConcurrentHashtable;
+package Objects;
+
+import CustomImplamentation.HashTable;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -9,7 +11,7 @@ public class Customer implements Runnable {
     private ArrayList<String> catalog;
     private HashTable hashTable;
 
-    Customer(int id, HashTable ht) {
+    public Customer(int id, HashTable ht) {
         this.id = id;
         this.hashTable = ht;
         catalog = ht.getAll();

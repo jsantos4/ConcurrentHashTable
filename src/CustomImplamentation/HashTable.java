@@ -1,4 +1,6 @@
-package ConcurrentHashtable;
+package CustomImplamentation;
+
+import Objects.Guitar;
 
 import java.util.ArrayList;
 
@@ -41,7 +43,7 @@ public class HashTable {
     }
 
     //Inserts guitar objects into table
-    void put(Guitar b) {
+    public void put(Guitar b) {
         String key = b.getName();
         int hashcode = hash(key, table.length);     //Hash key
         int i = hashcode & table.length - 1;
@@ -69,7 +71,7 @@ public class HashTable {
 
 
     //Returns all keys
-    ArrayList<String> getAll() {
+    public ArrayList<String> getAll() {
         ArrayList list = new ArrayList();
         for (int i = 0; i < table.length; i++) {
             for (node e = table[i]; e != null; e = e.next) {    //Run through whole table
@@ -85,7 +87,7 @@ public class HashTable {
     }
 
     //Returns value of a searched key
-    Guitar search(String k) {
+    public Guitar search(String k) {
         int hashcode = hash(k, table.length);
         int i = hashcode & table.length - 1;    //Hash key
         node bucketHead = table[i];

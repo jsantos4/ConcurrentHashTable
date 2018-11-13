@@ -1,4 +1,4 @@
-package ConcurrentHashtable;
+package CustomImplamentation;
 
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
@@ -9,7 +9,7 @@ class ReadWriteLock {
     private final Condition readable = lock.newCondition();
     private final Condition writable = lock.newCondition();
 
-    void lockWrite() {
+    public void lockWrite() {
         lock.lock();
         try {
             while (readers != 0 || writers != 0)
@@ -20,7 +20,7 @@ class ReadWriteLock {
         }
     }
 
-    void unlockWrite() {
+    public void unlockWrite() {
         lock.lock();
         try {
             writers = 0;
@@ -33,7 +33,7 @@ class ReadWriteLock {
         }
     }
 
-    void lockRead() {
+    public void lockRead() {
         lock.lock();
         try {
             while (writers != 0)
@@ -44,7 +44,7 @@ class ReadWriteLock {
         }
     }
 
-    void unlockRead() {
+    public void unlockRead() {
         lock.lock();
         try {
             if (--readers == 0)
