@@ -1,27 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/Objects/Customer.java" line="17" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/Objects/Customer.java" line="17" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="51cbfb8f-c442-44ef-9f52-c14615cf604d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/out/production/ConcurrentHashtable/CustomImplamentation/HashTable$node.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ConcurrentHashtable/CustomImplamentation/HashTable.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ConcurrentHashtable/CustomImplamentation/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ConcurrentHashtable/CustomImplamentation/Parser.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ConcurrentHashtable/Objects/Customer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ConcurrentHashtable/Objects/Guitar.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/ConcurrentHashtable/Objects/Vendor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/org_openjdk_jmh_jmh_core_1_21.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ConcurrentHashtable/ConcurrentHashtable/Customer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ConcurrentHashtable/ConcurrentHashtable/Guitar.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ConcurrentHashtable/ConcurrentHashtable/HashTable$node.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ConcurrentHashtable/ConcurrentHashtable/HashTable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ConcurrentHashtable/ConcurrentHashtable/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ConcurrentHashtable/ConcurrentHashtable/Parser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ConcurrentHashtable/ConcurrentHashtable/ReadWriteLock.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ConcurrentHashtable/CustomImplamentation/ReadWriteLock.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CustomImplamentation/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomImplamentation/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcurrentHashtable.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ConcurrentHashtable.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/ConcurrentHashtable_jar/ConcurrentHashtable.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/ConcurrentHashtable_jar/ConcurrentHashtable.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ConcurrentHashtable/CustomImplamentation/HashTable$node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ConcurrentHashtable/CustomImplamentation/HashTable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ConcurrentHashtable/CustomImplamentation/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ConcurrentHashtable/CustomImplamentation/Parser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ConcurrentHashtable/CustomImplamentation/ReadWriteLock.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ConcurrentHashtable/Objects/Customer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ConcurrentHashtable/Objects/Guitar.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ConcurrentHashtable/Objects/Vendor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CustomImplamentation/HashTable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CustomImplamentation/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CustomImplamentation/Parser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CustomImplamentation/ReadWriteLock.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Objects/Customer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Objects/Guitar.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Objects/Vendor.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -117,14 +120,57 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="1606541999">
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="8" />
+          <entry key="xml" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="8" />
+          <entry key="XML" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="605" />
+          <entry key="xml" value="22" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="605" />
+          <entry key="XML" value="22" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CustomImplamentation/HashTable.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/CustomImplamentation/HashTable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="89" column="11" selection-start-line="89" selection-start-column="11" selection-end-line="89" selection-end-column="11" />
+            <state relative-caret-position="450">
+              <caret line="28" column="11" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/CustomImplamentation/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -133,10 +179,70 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/CustomImplamentation/Main.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Benchmark/Benchmark.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="602">
-              <caret line="45" column="60" lean-forward="true" selection-start-line="45" selection-start-column="60" selection-end-line="45" selection-end-column="60" />
+            <state relative-caret-position="432">
+              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/CustomImplamentation/Parser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="27" column="54" selection-start-line="27" selection-start-column="54" selection-end-line="27" selection-end-column="54" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/CustomImplamentation/ReadWriteLock.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Objects/Customer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="558">
+              <caret line="31" column="23" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Objects/Guitar.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Objects/Vendor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="38" column="23" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -185,6 +291,15 @@
         <option value="$PROJECT_DIR$/src/CustomImplamentation/HashTable.java" />
         <option value="$PROJECT_DIR$/src/CustomImplamentation/ReadWriteLock.java" />
         <option value="$PROJECT_DIR$/src/CustomImplamentation/Main.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/Objects/Guitar.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CustomImplamentation/ReadWriteLock.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Objects/Customer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Objects/Vendor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CustomImplamentation/HashTable.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CustomImplamentation/Parser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CustomImplamentation/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Benchmark/Benchmark.java" />
       </list>
     </option>
   </component>
@@ -205,23 +320,60 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="ConcurrentHashtable" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ConcurrentHashtable" type="462c0819:PsiDirectoryNode" />
+              <item name="ConcurrentHashTable" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ConcurrentHashTable" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="ConcurrentHashtable" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ConcurrentHashtable" type="462c0819:PsiDirectoryNode" />
+              <item name="ConcurrentHashTable" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ConcurrentHashTable" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ConcurrentHashTable" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ConcurrentHashTable" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ConcurrentHashTable" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ConcurrentHashTable" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ConcurrentHashTable" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ConcurrentHashTable" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Benchmark" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ConcurrentHashTable" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ConcurrentHashTable" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="CustomImplamentation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ConcurrentHashTable" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ConcurrentHashTable" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Objects" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -231,11 +383,11 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542137297995" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542217303280" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/csc375hw02-master" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -254,7 +406,7 @@
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="CustomImplamentation.Main" />
+      <option name="MAIN_CLASS_NAME" value="main.java.CustomImplamentation.Main" />
       <module name="ConcurrentHashtable" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -285,12 +437,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42107000" />
+    <option name="totallyTimeSpent" value="47544000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15298508" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15716657" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -299,7 +451,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.3286334" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.32756758" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3383948" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -319,6 +471,36 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Maven Projects" order="8" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26397344" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.32756758" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3383948" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50053304" side_tool="true" weight="0.3286334" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3286334" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Maven Projects" order="8" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -329,61 +511,87 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/ConcurrentHashtable/Main1.java" />
     <entry file="file://$PROJECT_DIR$/Main1.java" />
-    <entry file="file://$PROJECT_DIR$/src/CustomImplamentation/ReadWriteLock.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/CustomImplamentation/ReadWriteLock.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="24" lean-forward="true" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+        <state relative-caret-position="90">
+          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Objects/Vendor.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Objects/Guitar.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Objects/Customer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Objects/Guitar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="126">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CustomImplamentation/Parser.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+        <state relative-caret-position="693">
+          <caret line="39" column="41" selection-start-line="39" selection-start-column="41" selection-end-line="39" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CustomImplamentation/HashTable.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Objects/Customer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="89" column="11" selection-start-line="89" selection-start-column="11" selection-end-line="89" selection-end-column="11" />
+        <state relative-caret-position="558">
+          <caret line="31" column="23" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CustomImplamentation/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Objects/Vendor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="602">
-          <caret line="45" column="60" lean-forward="true" selection-start-line="45" selection-start-column="60" selection-end-line="45" selection-end-column="60" />
+        <state relative-caret-position="336">
+          <caret line="38" column="23" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CustomImplamentation/Parser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="27" column="54" selection-start-line="27" selection-start-column="54" selection-end-line="27" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CustomImplamentation/HashTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="28" column="11" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CustomImplamentation/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Benchmark/Benchmark.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -401,6 +609,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -456,7 +665,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>org.openjdk.jmh:jmh-core:1.21</last-edited>
+          <last-edited>org.openjdk.jmh:jmh-core:1.19</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

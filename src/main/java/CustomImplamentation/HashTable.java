@@ -1,6 +1,6 @@
-package CustomImplamentation;
+package main.java.CustomImplamentation;
 
-import Objects.Guitar;
+import main.java.Objects.*;
 
 import java.util.ArrayList;
 
@@ -26,7 +26,7 @@ public class HashTable {
     private double count;
     private ReadWriteLock tableLock = new ReadWriteLock();
 
-    HashTable() {
+    public HashTable() {
         table = new node[initialcap];
     }
 

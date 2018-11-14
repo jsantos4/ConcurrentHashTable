@@ -1,4 +1,4 @@
-package CustomImplamentation;
+package main.java.CustomImplamentation;
 
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;

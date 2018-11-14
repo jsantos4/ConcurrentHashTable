@@ -1,6 +1,6 @@
-package Objects;
+package main.java.Objects;
 
-import CustomImplamentation.HashTable;
+import main.java.CustomImplamentation.*;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -28,7 +28,8 @@ public class Customer implements Runnable {
             try {
                 Thread.sleep(random.nextInt(5000));
             } catch (InterruptedException e) {
-                System.out.println("Shopper " + id + "has left");
+                System.out.println("\nShopper " + id + " has left\n");
+                return;
             }
 
             shop();

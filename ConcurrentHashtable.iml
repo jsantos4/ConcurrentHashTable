@@ -8,6 +8,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="org.jsoup:jsoup:1.11.3" level="project" />
-    <orderEntry type="library" name="org.openjdk.jmh:jmh-core:1.21" level="project" />
+    <orderEntry type="library" name="org.openjdk.jmh:jmh-core:1.19" level="project" />
   </component>
 </module>
