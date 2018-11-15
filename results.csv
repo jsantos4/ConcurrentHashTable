@@ -1,1 +1,5 @@
 "Benchmark","Mode","Threads","Samples","Score","Score Error (99.9%)","Unit"
+"main.java.Benchmark.Benchmark.benchCustomChangePrice","thrpt",4,3,11.761282,55.346970,"ops/ms"
+"main.java.Benchmark.Benchmark.benchCustomGet","thrpt",4,3,3.234318,15.573865,"ops/ms"
+"main.java.Benchmark.Benchmark.benchJDKChangePrice","thrpt",4,3,15.982829,3.690694,"ops/ms"
+"main.java.Benchmark.Benchmark.benchJDKGet","thrpt",4,3,5.332440,0.311341,"ops/ms"

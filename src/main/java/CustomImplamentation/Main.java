@@ -37,8 +37,8 @@ public class Main {
                 .include(Benchmark.class.getSimpleName())
                 .forks(1)
                 .threads(Runtime.getRuntime().availableProcessors())
-                .warmupIterations(5)
-                .measurementIterations(5)
+                .warmupIterations(3)
+                .measurementIterations(3)
                 .resultFormat(ResultFormatType.CSV)
                 .result("results.csv")
                 .build();
@@ -66,7 +66,7 @@ public class Main {
                 executor.execute(vendor);
             }
 
-            if (executor.awaitTermination(60, TimeUnit.SECONDS)) {
+            if (executor.awaitTermination(15, TimeUnit.SECONDS)) {
                 System.out.println("\nStores are now closed!\n");
             } else {
                 executor.shutdownNow();

@@ -21,7 +21,8 @@ public class Benchmark {
     private Parser parser = new Parser();
 
     private static int threads = (Runtime.getRuntime().availableProcessors() > 32) ? 32 : Runtime.getRuntime().availableProcessors();
-    private static int vendors = 1;
+    private static int vendorNum = 1;
+    private ArrayList<Vendor> vendors = new ArrayList<>();
     private ArrayList<Customer> customers = new ArrayList<>();
     private ArrayList<String> catalog = new ArrayList<>();
     private Random random = new Random();
@@ -39,9 +40,14 @@ public class Benchmark {
 
         catalog = hashTable.getAll();
 
-        for (int i = 0; i < threads - vendors; i++) {
+        for (int i = 0; i < threads - vendorNum; i++) {
             Customer customer = new Customer(i, hashTable);
             customers.add(customer);
+        }
+
+        for (int i = 0; i < vendorNum; i++) {
+            Vendor vendor = new Vendor(i, hashTable);
+            vendors.add(vendor);
         }
     }
 
@@ -52,8 +58,6 @@ public class Benchmark {
         ExecutorService executor = Executors.newFixedThreadPool(threads);
 
         for (Customer customer : customers) {
-            executor.execute(customer);
-            executor.execute(customer);
             executor.execute(customer);
 
         }
@@ -75,9 +79,39 @@ public class Benchmark {
 
         for (Customer customer : customers) {
             executor.execute(c);
-            executor.execute(c);
-            executor.execute(c);
 
+        }
+        executor.shutdown();
+    }
+
+    @org.openjdk.jmh.annotations.Benchmark
+    @BenchmarkMode(Mode.Throughput)
+    @OutputTimeUnit(TimeUnit.MILLISECONDS)
+    public void benchCustomChangePrice(Blackhole blackhole) {
+        ExecutorService executor = Executors.newFixedThreadPool(vendorNum);
+
+        for (Vendor vendor : vendors) {
+            executor.execute(vendor);
+        }
+        executor.shutdown();
+    }
+
+    @org.openjdk.jmh.annotations.Benchmark
+    @BenchmarkMode(Mode.Throughput)
+    @OutputTimeUnit(TimeUnit.MILLISECONDS)
+    public void benchJDKChangePrice(Blackhole blackhole) {
+        ExecutorService executor = Executors.newFixedThreadPool(vendorNum);
+
+        Runnable v = new Runnable() {
+            @Override
+            public void run() {
+                Guitar guitar = hashMap.get(catalog.get(random.nextInt(catalog.size())));
+                guitar.changePrice();
+            }
+        };
+
+        for (Vendor vendor : vendors) {
+            executor.execute(v);
         }
         executor.shutdown();
     }

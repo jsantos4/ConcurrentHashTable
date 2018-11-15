@@ -1,1 +1,4 @@
+JMH S 29 main.java.Benchmark.Benchmark S 59 main.java.Benchmark.generated.Benchmark_benchJDKGet_jmhTest S 11 benchJDKGet S 10 Throughput E A 1 1 1 E E E E E E E E E E E E E E U 12 MILLISECONDS E E 
 JMH S 29 main.java.Benchmark.Benchmark S 62 main.java.Benchmark.generated.Benchmark_benchCustomGet_jmhTest S 14 benchCustomGet S 10 Throughput E A 1 1 1 E E E E E E E E E E E E E E U 12 MILLISECONDS E E 
+JMH S 29 main.java.Benchmark.Benchmark S 70 main.java.Benchmark.generated.Benchmark_benchCustomChangePrice_jmhTest S 22 benchCustomChangePrice S 10 Throughput E A 1 1 1 E E E E E E E E E E E E E E U 12 MILLISECONDS E E 
+JMH S 29 main.java.Benchmark.Benchmark S 67 main.java.Benchmark.generated.Benchmark_benchJDKChangePrice_jmhTest S 19 benchJDKChangePrice S 10 Throughput E A 1 1 1 E E E E E E E E E E E E E E U 12 MILLISECONDS E E 
