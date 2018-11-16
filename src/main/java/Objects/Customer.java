@@ -24,7 +24,7 @@ public class Customer implements Runnable {
     }
     public void run() {
         Random random = new Random();
-        for(int i = 0; i < 10000; i++) {
+        for(;;) {
             try {
                 Thread.sleep(random.nextInt(5000));
             } catch (InterruptedException e) {

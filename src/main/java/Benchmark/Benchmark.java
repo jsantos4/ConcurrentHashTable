@@ -59,14 +59,20 @@ public class Benchmark {
 
         for (Customer customer : customers) {
             executor.execute(customer);
+            try {
+                executor.awaitTermination(30, TimeUnit.SECONDS);
+            } catch (InterruptedException e) {
+                System.out.println("Customer died");
+            }
 
         }
+
         executor.shutdown();
     }
 
-    //@org.openjdk.jmh.annotations.Benchmark
-    //@BenchmarkMode(Mode.Throughput)
-    //@OutputTimeUnit(TimeUnit.MILLISECONDS)
+    @org.openjdk.jmh.annotations.Benchmark
+    @BenchmarkMode(Mode.Throughput)
+    @OutputTimeUnit(TimeUnit.MILLISECONDS)
     public void benchJDKGet(Blackhole blackhole) {
         ExecutorService executor = Executors.newFixedThreadPool(threads);
 
@@ -92,13 +98,19 @@ public class Benchmark {
 
         for (Vendor vendor : vendors) {
             executor.execute(vendor);
+            try {
+                executor.awaitTermination(30, TimeUnit.SECONDS);
+            } catch (InterruptedException e) {
+                System.out.println("Vendor died");
+            }
+
         }
         executor.shutdown();
     }
 
-    //@org.openjdk.jmh.annotations.Benchmark
-    //@BenchmarkMode(Mode.Throughput)
-    //@OutputTimeUnit(TimeUnit.MILLISECONDS)
+    @org.openjdk.jmh.annotations.Benchmark
+    @BenchmarkMode(Mode.Throughput)
+    @OutputTimeUnit(TimeUnit.MILLISECONDS)
     public void benchJDKChangePrice(Blackhole blackhole) {
         ExecutorService executor = Executors.newFixedThreadPool(vendorNum);
 
