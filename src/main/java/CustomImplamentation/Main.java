@@ -19,7 +19,7 @@ import java.util.concurrent.TimeUnit;
 
 public class Main {
     static int threads = (Runtime.getRuntime().availableProcessors() > 32) ? 32 : Runtime.getRuntime().availableProcessors();
-    static int vendors = 1;
+    static int vendors = 4;
 
     public static void main(String[] args) {
 
