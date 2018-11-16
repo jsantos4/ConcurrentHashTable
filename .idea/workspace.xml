@@ -380,8 +380,8 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542390920431" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542391112691" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/out/artifacts/ConcurrentHashtable_jar/ConcurrentHashtable.jar" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Artifacts" />
@@ -411,10 +411,9 @@
     </configuration>
     <configuration name="ConcurrentHashtable.jar" type="JarApplication" factoryName="JAR Application">
       <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/ConcurrentHashtable_jar/ConcurrentHashtable.jar" />
-      <option name="WORKING_DIRECTORY" value="C:\Users\BAgunner300\Documents\csc375\Assignment 2\ConcurrentHashTable" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
-      <module name="ConcurrentHashtable" />
       <method v="2" />
     </configuration>
     <list>
