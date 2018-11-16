@@ -31,7 +31,7 @@ public class Vendor implements Runnable{
 
     public void run() {
         Random random = new Random();
-        for(;;) {
+        for(int i = 0; i < 1000; i++) {
             try {
                 Thread.sleep(random.nextInt(5000));
             } catch (InterruptedException e) {

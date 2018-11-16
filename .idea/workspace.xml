@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="ConcurrentHashtable:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/src/main/java/Objects/Customer.java" line="17" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="51cbfb8f-c442-44ef-9f52-c14615cf604d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/out/artifacts/ConcurrentHashtable_jar/ConcurrentHashtable.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ConcurrentHashtable/main/java/CustomImplamentation/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ConcurrentHashtable/main/java/CustomImplamentation/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CustomImplamentation/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CustomImplamentation/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Objects/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Objects/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Objects/Vendor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Objects/Vendor.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -118,13 +127,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1028" />
+          <entry key="java" value="1113" />
           <entry key="xml" value="23" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1028" />
+          <entry key="JAVA" value="1113" />
           <entry key="XML" value="23" />
         </counts>
       </usages-collector>
@@ -172,11 +181,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/CustomImplamentation/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="19" column="19" lean-forward="true" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+            <state relative-caret-position="-1863">
+              <caret line="40" column="32" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -184,8 +193,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Benchmark/Benchmark.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="50" column="9" selection-start-line="50" selection-start-column="9" selection-end-line="50" selection-end-column="9" />
+            <state relative-caret-position="-112">
+              <caret line="30" column="22" lean-forward="true" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -214,8 +223,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Objects/Customer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="31" column="23" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
+            <state relative-caret-position="440">
+              <caret line="26" column="36" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -235,11 +244,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Objects/Vendor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="35" selection-start-line="35" selection-end-line="35" />
+            <state relative-caret-position="266">
+              <caret line="33" column="36" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -294,13 +303,13 @@
         <option value="$PROJECT_DIR$/src/CustomImplamentation/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/Objects/Guitar.java" />
         <option value="$PROJECT_DIR$/src/main/java/CustomImplamentation/ReadWriteLock.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Objects/Customer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Objects/Vendor.java" />
         <option value="$PROJECT_DIR$/src/main/java/CustomImplamentation/HashTable.java" />
         <option value="$PROJECT_DIR$/src/main/java/CustomImplamentation/Parser.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/Benchmark/Benchmark.java" />
         <option value="$PROJECT_DIR$/src/main/java/CustomImplamentation/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Objects/Customer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Objects/Vendor.java" />
       </list>
     </option>
   </component>
@@ -375,7 +384,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542391660079" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542394506362" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -440,12 +449,12 @@
       <workItem from="1542239509915" duration="5115000" />
       <workItem from="1542299196989" duration="17002000" />
       <workItem from="1542334059607" duration="3201000" />
-      <workItem from="1542389694793" duration="1871000" />
+      <workItem from="1542389694793" duration="3394000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74885000" />
+    <option name="totallyTimeSpent" value="76408000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
@@ -560,16 +569,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Objects/Customer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="31" column="23" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Objects/Guitar.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
@@ -580,27 +579,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Objects/Vendor.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Benchmark/Benchmark.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        <state relative-caret-position="-112">
+          <caret line="30" column="22" lean-forward="true" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CustomImplamentation/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1863">
+          <caret line="40" column="32" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Objects/Customer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="26" column="36" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Benchmark/Benchmark.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Objects/Vendor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="50" column="9" selection-start-line="50" selection-start-column="9" selection-end-line="50" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CustomImplamentation/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="19" column="19" lean-forward="true" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+        <state relative-caret-position="266">
+          <caret line="33" column="36" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
