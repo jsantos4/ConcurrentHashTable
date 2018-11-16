@@ -3,6 +3,8 @@ package main.java.CustomImplamentation;
 import main.java.Objects.*;
 
 import java.util.ArrayList;
+import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class HashTable {
 
@@ -23,11 +25,13 @@ public class HashTable {
     //local variables
     private static node[] table;
     private static final int initialcap = 4;
-    private double count;
+    private AtomicInteger count;
     private ReadWriteLock tableLock = new ReadWriteLock();
+    private AtomicBoolean resizing = new AtomicBoolean(false);
 
     public HashTable() {
         table = new node[initialcap];
+        count = new AtomicInteger(0);
     }
 
     //Hashes guitar names
@@ -44,41 +48,58 @@ public class HashTable {
 
     //Inserts guitar objects into table
     public void put(Guitar b) {
-        String key = b.getName();
-        int hashcode = hash(key, table.length);     //Hash key
-        int i = hashcode & table.length - 1;
-        node bucketHead = table[i];
-        if (bucketHead != null)
-            bucketHead.lock.lockWrite();
-        for (node e = bucketHead; e != null; e = e.next) {    //Run through nodes in index until the end
-            if (key.equals(e.key)) {
-                e.value = b;    //Set node's value
-                count++;        //Increment hash table counter
-                bucketHead.lock.unlockWrite();
+        for (;;) {
+            if (!resizing.get()){
+
+                if ((count.get() / table.length) >= 0.75) {   //If table is 75% full
+                    resizing.getAndSet(true);
+                    resize();                           //Call resize()
+                    resizing.getAndSet(false);
+                }
+
+                String key = b.getName();
+                int hashcode = hash(key, table.length);     //Hash key
+                int i = hashcode & table.length - 1;
+                node bucketHead = table[i];
+                if (bucketHead != null) {
+                    bucketHead.lock.lockWrite();
+                }
+                for (node e = bucketHead; e != null; e = e.next) {    //Run through nodes in index until the end
+                    if (key.equals(e.key)) {
+                        e.value = b;    //Set node's value
+                        count.compareAndSet(count.get(), count.get() + 1);        //Increment hash table counter
+                        bucketHead.lock.unlockWrite();
+                        return;
+                    }
+                }
+                if (bucketHead != null) {
+                    bucketHead.lock.unlockWrite();
+                }
+                node p = new node(key, b, table[i]);    //Create node at index if empty
+                table[i] = p;
+                count.compareAndSet(count.get(), count.get() + 1);
                 return;
             }
         }
-        if (bucketHead != null)
-            bucketHead.lock.unlockWrite();
-        node p = new node(key, b, table[i]);    //Create node at index if empty
-        table[i] = p;
-        count++;
 
-        if ((count / table.length) >= 0.75) {   //If table is 75% full
-            resize();                           //Call resize()
-        }
+
     }
 
 
     //Returns all keys
     public ArrayList<String> getAll() {
-        ArrayList list = new ArrayList();
-        for (int i = 0; i < table.length; i++) {
-            for (node e = table[i]; e != null; e = e.next) {    //Run through whole table
-                list.add(e.key);        //Insert node into arrayList
+        for (;;) {
+            if (!resizing.get()) {
+                ArrayList list = new ArrayList();
+                for (int i = 0; i < table.length; i++) {
+                    for (node e = table[i]; e != null; e = e.next) {    //Run through whole table
+                        list.add(e.key);        //Insert node into arrayList
+                    }
+                }
+                return list;    //Return arraylist
             }
+
         }
-        return list;    //Return arraylist
     }
 
     //Returns if element in table is empty
@@ -88,18 +109,22 @@ public class HashTable {
 
     //Returns value of a searched key
     public Guitar search(String k) {
-        int hashcode = hash(k, table.length);
-        int i = hashcode & table.length - 1;    //Hash key
-        node bucketHead = table[i];
-        bucketHead.lock.lockRead();
-        for (node e = bucketHead; !isEmpty(e); e = e.next) {
-            if (k.equals(e.key)) {
+        for (;;) {
+            if (!resizing.get()) {
+                int hashcode = hash(k, table.length);
+                int i = hashcode & table.length - 1;    //Hash key
+                node bucketHead = table[i];
+                bucketHead.lock.lockRead();
+                for (node e = bucketHead; !isEmpty(e); e = e.next) {
+                    if (k.equals(e.key)) {
+                        bucketHead.lock.unlockRead();
+                        return e.value;         //Run through index's nodes and return searched guitar
+                    }
+                }
                 bucketHead.lock.unlockRead();
-                return e.value;         //Run through index's nodes and return searched guitar
+                return null;
             }
         }
-        bucketHead.lock.unlockRead();
-        return null;
     }
 
     //doubles table size when three quarters load is reached
