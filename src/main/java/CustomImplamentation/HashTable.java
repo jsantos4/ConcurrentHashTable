@@ -13,12 +13,12 @@ public class HashTable {
         String key;
         Guitar value;
         node next;
-        ReadWriteLock lock;
+        //ReadWriteLock lock;
         node(String key, Guitar value, node next) {
             this.key = key;
             this.value = value;
             this.next = next;
-            lock = new ReadWriteLock();
+            //lock = new ReadWriteLock();
         }
     }
 
@@ -26,7 +26,7 @@ public class HashTable {
     private static node[] table;
     private static final int initialcap = 4;
     private AtomicInteger count;
-    private ReadWriteLock tableLock = new ReadWriteLock();
+    //private ReadWriteLock tableLock = new ReadWriteLock();
     private AtomicBoolean resizing = new AtomicBoolean(false);
 
     public HashTable() {
@@ -61,20 +61,20 @@ public class HashTable {
                 int hashcode = hash(key, table.length);     //Hash key
                 int i = hashcode & table.length - 1;
                 node bucketHead = table[i];
-                if (bucketHead != null) {
+                /*if (bucketHead != null) {
                     bucketHead.lock.lockWrite();
-                }
+                }*/
                 for (node e = bucketHead; e != null; e = e.next) {    //Run through nodes in index until the end
                     if (key.equals(e.key)) {
                         e.value = b;    //Set node's value
                         count.compareAndSet(count.get(), count.get() + 1);        //Increment hash table counter
-                        bucketHead.lock.unlockWrite();
+                        //bucketHead.lock.unlockWrite();
                         return;
                     }
                 }
-                if (bucketHead != null) {
+                /*if (bucketHead != null) {
                     bucketHead.lock.unlockWrite();
-                }
+                }*/
                 node p = new node(key, b, table[i]);    //Create node at index if empty
                 table[i] = p;
                 count.compareAndSet(count.get(), count.get() + 1);
@@ -114,14 +114,14 @@ public class HashTable {
                 int hashcode = hash(k, table.length);
                 int i = hashcode & table.length - 1;    //Hash key
                 node bucketHead = table[i];
-                bucketHead.lock.lockRead();
+                //bucketHead.lock.lockRead();
                 for (node e = bucketHead; !isEmpty(e); e = e.next) {
                     if (k.equals(e.key)) {
-                        bucketHead.lock.unlockRead();
+                        //bucketHead.lock.unlockRead();
                         return e.value;         //Run through index's nodes and return searched guitar
                     }
                 }
-                bucketHead.lock.unlockRead();
+                //bucketHead.lock.unlockRead();
                 return null;
             }
         }
@@ -129,20 +129,20 @@ public class HashTable {
 
     //doubles table size when three quarters load is reached
     private void resize() {
-        tableLock.lockWrite();
+        //tableLock.lockWrite();
         node[] newTable = new node[table.length*2];     //Create new table with twice size of original
         //Can't use put, essentially had to rewrite and tweak
         //the put method to remap all elements of the old table
         for (int i = 0; i < table.length; i++) {
             node bucketHead = table[i];
             if (bucketHead != null)
-                bucketHead.lock.lockWrite();
+                //bucketHead.lock.lockWrite();
             for (node e = bucketHead; e != null; e = e.next) {        //Run through table
                 int hc = hash(e.key, newTable.length);      //Rehash node
                 if (newTable[hc] == null){          //If index is empty
                     node p = new node(e.key, e.value, newTable[hc]);
                     newTable[hc] = p;           //Place node in index
-                    bucketHead.lock.unlockWrite();
+                    //bucketHead.lock.unlockWrite();
                 } else {        //If not
                     node f = newTable[hc];
                     while(!isEmpty(f)) {
@@ -150,12 +150,12 @@ public class HashTable {
                     }
                     node p = new node(e.key, e.value, f);       //Place node at end of bucket
                     f = p;
-                    bucketHead.lock.unlockWrite();
+                    //bucketHead.lock.unlockWrite();
                 }
             }
         }
         table = newTable;       //Set table to new table
-        tableLock.unlockWrite();
+        //tableLock.unlockWrite();
 
     }
 }
