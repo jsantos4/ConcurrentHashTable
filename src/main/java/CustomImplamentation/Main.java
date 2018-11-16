@@ -53,7 +53,7 @@ public class Main {
         }
 
 
-        buildHTML();
+        //buildHTML();
     }
 
     private static void run(HashTable hashTable) {
