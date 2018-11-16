@@ -5,6 +5,4 @@ dontinline,*.*_ss_jmhStub
 dontinline,*.*_thrpt_jmhStub
 inline,main/java/Benchmark/Benchmark.benchCustomChangePrice
 inline,main/java/Benchmark/Benchmark.benchCustomGet
-inline,main/java/Benchmark/Benchmark.benchJDKChangePrice
-inline,main/java/Benchmark/Benchmark.benchJDKGet
 inline,main/java/Benchmark/Benchmark.go
