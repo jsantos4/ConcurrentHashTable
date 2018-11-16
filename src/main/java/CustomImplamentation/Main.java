@@ -39,8 +39,8 @@ public class Main {
                 .include(Benchmark.class.getSimpleName())
                 .forks(1)
                 .threads(threads)
-                .warmupIterations(3)
-                .measurementIterations(3)
+                .warmupIterations(5)
+                .measurementIterations(5)
                 .resultFormat(ResultFormatType.CSV)
                 .result("results.csv")
                 .build();

@@ -21,7 +21,7 @@ public class Benchmark {
     private Parser parser = new Parser();
 
     private static int threads = (Runtime.getRuntime().availableProcessors() > 32) ? 32 : Runtime.getRuntime().availableProcessors();
-    private static int vendorNum = 1;
+    private static int vendorNum = 4;
     private ArrayList<Vendor> vendors = new ArrayList<>();
     private ArrayList<Customer> customers = new ArrayList<>();
     private ArrayList<String> catalog = new ArrayList<>();
