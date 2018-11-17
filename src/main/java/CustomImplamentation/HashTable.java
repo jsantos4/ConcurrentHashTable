@@ -1,7 +1,9 @@
 package main.java.CustomImplamentation;
 
+import com.sun.java.accessibility.util.GUIInitializedListener;
 import main.java.Objects.*;
 
+import java.lang.management.GarbageCollectorMXBean;
 import java.util.ArrayList;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -58,6 +60,10 @@ public class HashTable {
                 }
 
                 String key = b.getName();
+
+                if(search(key) != null) {
+
+                }
                 int hashcode = hash(key, table.length);     //Hash key
                 int i = hashcode & table.length - 1;
                 node bucketHead = table[i];
@@ -85,6 +91,13 @@ public class HashTable {
 
     }
 
+    //Changes price of guitar in data structure
+    public double changePrice(Guitar guitar) {
+        if (search(guitar.getName()) != null) {
+            guitar.changePrice();
+        }
+        return guitar.getPrice();
+    }
 
     //Returns all keys
     public ArrayList<String> getAll() {

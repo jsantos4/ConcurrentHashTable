@@ -23,7 +23,7 @@ public class Customer implements Runnable {
         System.out.println("Shopper " + id + " is currently playing the " + guitar.getName());
     }
     public void run() {
-        Random random = new Random();
+        /*Random random = new Random();
         for(;;) {
             try {
                 Thread.sleep(random.nextInt(5000));
@@ -32,7 +32,8 @@ public class Customer implements Runnable {
                 return;
             }
 
-            shop();
-        }
+
+        }*/
+        shop();
     }
 }

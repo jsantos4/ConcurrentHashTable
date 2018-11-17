@@ -28,7 +28,7 @@ public class Benchmark {
     private Random random = new Random();
 
     @Setup
-    public void go() {
+    public void setup() {
         try {
             parser.parse("https://www.normansrareguitars.com/product-category/guitars/", hashTable, hashMap);
             for (int i = 2; i < 11; i++) {
@@ -57,16 +57,17 @@ public class Benchmark {
     public void benchCustomGet(Blackhole blackhole) {
         ExecutorService executor = Executors.newFixedThreadPool(threads);
 
-        for (Customer customer : customers) {
-            executor.execute(customer);
-            try {
-                executor.awaitTermination(30, TimeUnit.SECONDS);
-            } catch (InterruptedException e) {
-                System.out.println("Customer died");
+        Runnable c = new Runnable() {
+            @Override
+            public void run() {
+                hashTable.search(catalog.get(random.nextInt(catalog.size())));
             }
+        };
+
+        for (Customer customer : customers) {
+            executor.execute(c);
 
         }
-
         executor.shutdown();
     }
 
@@ -98,12 +99,6 @@ public class Benchmark {
 
         for (Vendor vendor : vendors) {
             executor.execute(vendor);
-            try {
-                executor.awaitTermination(30, TimeUnit.SECONDS);
-            } catch (InterruptedException e) {
-                System.out.println("Vendor died");
-            }
-
         }
         executor.shutdown();
     }
@@ -118,7 +113,7 @@ public class Benchmark {
             @Override
             public void run() {
                 Guitar guitar = hashMap.get(catalog.get(random.nextInt(catalog.size())));
-                guitar.changePrice();
+                hashTable.changePrice(guitar);
             }
         };
 

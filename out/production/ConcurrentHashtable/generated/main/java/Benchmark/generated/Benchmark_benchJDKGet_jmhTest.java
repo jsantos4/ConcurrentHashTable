@@ -331,7 +331,7 @@ public final class Benchmark_benchJDKGet_jmhTest {
         Benchmark_jmhType val = f_benchmark0_0;
         if (val == null) {
             val = new Benchmark_jmhType();
-            val.go();
+            val.setup();
             f_benchmark0_0 = val;
         }
         return val;

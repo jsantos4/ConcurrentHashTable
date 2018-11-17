@@ -53,7 +53,7 @@ public class Main {
         }
 
 
-        //buildHTML();
+        buildHTML();
     }
 
     private static void run(HashTable hashTable) {
@@ -133,12 +133,12 @@ public class Main {
                 "        </tr>\n" +
                 "        <tr>\n" +
                 "            <td><div class=\"BarLabel\"\">JDK Get</div></td>\n" +
-                "            <td class=\"BarFull\">\n" + getResultBar(scores.get(0)) +
+                "            <td class=\"BarFull\">\n" + getResultBar(scores.get(3)) +
                 "            </td>\n" +
                 "        </tr>\n" +
                 "        <tr>\n" +
                 "            <td><div class=\"BarLabel\"\">Custom Change Price</div></td>\n" +
-                "            <td class=\"BarFull\">\n" + getResultBar(scores.get(3)) +
+                "            <td class=\"BarFull\">\n" + getResultBar(scores.get(0)) +
                 "            </td>\n" +
                 "        </tr>\n" +
                 "        <tr>\n" +
@@ -162,7 +162,7 @@ public class Main {
     }
 
     private static String getResultBar(double score) {
-        double scoreAW = score * 10;
+        double scoreAW = score;
         String bar = "<img src= \"rec.png\" height = \"12\" alt=\"" + String.valueOf(score) + "\" width=\"" + String.valueOf(scoreAW) +
                 "\" />\n" +
                 "<p>" + String.valueOf(score) + "</p>";

@@ -1,3 +1,5 @@
 "Benchmark","Mode","Threads","Samples","Score","Score Error (99.9%)","Unit"
-"main.java.Benchmark.Benchmark.benchCustomChangePrice","thrpt",4,5,1.030411,0.506978,"ops/ms"
-"main.java.Benchmark.Benchmark.benchCustomGet","thrpt",4,5,89.512155,176.531152,"ops/ms"
+"main.java.Benchmark.Benchmark.benchCustomChangePrice","thrpt",4,5,1.641761,0.883904,"ops/ms"
+"main.java.Benchmark.Benchmark.benchCustomGet","thrpt",4,5,272.367581,205.773827,"ops/ms"
+"main.java.Benchmark.Benchmark.benchJDKChangePrice","thrpt",4,5,1.960999,0.190655,"ops/ms"
+"main.java.Benchmark.Benchmark.benchJDKGet","thrpt",4,5,366.998187,971.250650,"ops/ms"

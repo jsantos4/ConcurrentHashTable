@@ -21,7 +21,7 @@ public class Vendor implements Runnable{
         Random random = new Random();
         Guitar guitar = hashTable.search(catalog.get(random.nextInt(catalog.size())));
         double oldPrice = guitar.getPrice();
-        double newPrice = guitar.changePrice();
+        double newPrice = hashTable.changePrice(guitar);
         if (newPrice > oldPrice)
             System.out.println("Vendor " + id + " raised the price of the " + guitar.getName() + " by $" + (newPrice - oldPrice));
         else
@@ -30,7 +30,7 @@ public class Vendor implements Runnable{
     }
 
     public void run() {
-        Random random = new Random();
+        /*Random random = new Random();
         for(;;) {
             try {
                 Thread.sleep(random.nextInt(5000));
@@ -39,7 +39,7 @@ public class Vendor implements Runnable{
                 return;
             }
 
-            changeGuitarPrice();
-        }
+        }*/
+        changeGuitarPrice();
     }
 }
