@@ -53,7 +53,7 @@ public class Benchmark {
 
     @org.openjdk.jmh.annotations.Benchmark
     @BenchmarkMode(Mode.Throughput)
-    @OutputTimeUnit(TimeUnit.MILLISECONDS)
+    @OutputTimeUnit(TimeUnit.SECONDS)
     public void benchCustomGet(Blackhole blackhole) {
         ExecutorService executor = Executors.newFixedThreadPool(threads);
 
@@ -73,7 +73,7 @@ public class Benchmark {
 
     @org.openjdk.jmh.annotations.Benchmark
     @BenchmarkMode(Mode.Throughput)
-    @OutputTimeUnit(TimeUnit.MILLISECONDS)
+    @OutputTimeUnit(TimeUnit.SECONDS)
     public void benchJDKGet(Blackhole blackhole) {
         ExecutorService executor = Executors.newFixedThreadPool(threads);
 
@@ -93,7 +93,7 @@ public class Benchmark {
 
     @org.openjdk.jmh.annotations.Benchmark
     @BenchmarkMode(Mode.Throughput)
-    @OutputTimeUnit(TimeUnit.MILLISECONDS)
+    @OutputTimeUnit(TimeUnit.SECONDS)
     public void benchCustomChangePrice(Blackhole blackhole) {
         ExecutorService executor = Executors.newFixedThreadPool(vendorNum);
 
@@ -105,7 +105,7 @@ public class Benchmark {
 
     @org.openjdk.jmh.annotations.Benchmark
     @BenchmarkMode(Mode.Throughput)
-    @OutputTimeUnit(TimeUnit.MILLISECONDS)
+    @OutputTimeUnit(TimeUnit.SECONDS)
     public void benchJDKChangePrice(Blackhole blackhole) {
         ExecutorService executor = Executors.newFixedThreadPool(vendorNum);
 
