@@ -75,7 +75,7 @@ public final class Benchmark_benchJDKGet_jmhTest {
 
             control.announceWarmupReady();
             while (control.warmupShouldWait) {
-                l_benchmark0_0.benchJDKGet(blackhole);
+                l_benchmark0_0.benchJDKGet();
                 res.allOps++;
             }
 
@@ -85,7 +85,7 @@ public final class Benchmark_benchJDKGet_jmhTest {
             control.announceWarmdownReady();
             try {
                 while (control.warmdownShouldWait) {
-                    l_benchmark0_0.benchJDKGet(blackhole);
+                    l_benchmark0_0.benchJDKGet();
                     res.allOps++;
                 }
                 control.preTearDown();
@@ -94,6 +94,7 @@ public final class Benchmark_benchJDKGet_jmhTest {
             }
 
             if (control.isLastIteration()) {
+                l_benchmark0_0.tearDown();
                 f_benchmark0_0 = null;
             }
             res.allOps += res.measuredOps;
@@ -116,7 +117,7 @@ public final class Benchmark_benchJDKGet_jmhTest {
         long realTime = 0;
         result.startTime = System.nanoTime();
         do {
-            l_benchmark0_0.benchJDKGet(blackhole);
+            l_benchmark0_0.benchJDKGet();
             operations++;
         } while(!control.isDone);
         result.stopTime = System.nanoTime();
@@ -142,7 +143,7 @@ public final class Benchmark_benchJDKGet_jmhTest {
 
             control.announceWarmupReady();
             while (control.warmupShouldWait) {
-                l_benchmark0_0.benchJDKGet(blackhole);
+                l_benchmark0_0.benchJDKGet();
                 res.allOps++;
             }
 
@@ -152,7 +153,7 @@ public final class Benchmark_benchJDKGet_jmhTest {
             control.announceWarmdownReady();
             try {
                 while (control.warmdownShouldWait) {
-                    l_benchmark0_0.benchJDKGet(blackhole);
+                    l_benchmark0_0.benchJDKGet();
                     res.allOps++;
                 }
                 control.preTearDown();
@@ -161,6 +162,7 @@ public final class Benchmark_benchJDKGet_jmhTest {
             }
 
             if (control.isLastIteration()) {
+                l_benchmark0_0.tearDown();
                 f_benchmark0_0 = null;
             }
             res.allOps += res.measuredOps;
@@ -183,7 +185,7 @@ public final class Benchmark_benchJDKGet_jmhTest {
         long realTime = 0;
         result.startTime = System.nanoTime();
         do {
-            l_benchmark0_0.benchJDKGet(blackhole);
+            l_benchmark0_0.benchJDKGet();
             operations++;
         } while(!control.isDone);
         result.stopTime = System.nanoTime();
@@ -209,7 +211,7 @@ public final class Benchmark_benchJDKGet_jmhTest {
 
             control.announceWarmupReady();
             while (control.warmupShouldWait) {
-                l_benchmark0_0.benchJDKGet(blackhole);
+                l_benchmark0_0.benchJDKGet();
                 res.allOps++;
             }
 
@@ -223,7 +225,7 @@ public final class Benchmark_benchJDKGet_jmhTest {
             control.announceWarmdownReady();
             try {
                 while (control.warmdownShouldWait) {
-                    l_benchmark0_0.benchJDKGet(blackhole);
+                    l_benchmark0_0.benchJDKGet();
                     res.allOps++;
                 }
                 control.preTearDown();
@@ -232,6 +234,7 @@ public final class Benchmark_benchJDKGet_jmhTest {
             }
 
             if (control.isLastIteration()) {
+                l_benchmark0_0.tearDown();
                 f_benchmark0_0 = null;
             }
             res.allOps += res.measuredOps * batchSize;
@@ -261,7 +264,7 @@ public final class Benchmark_benchJDKGet_jmhTest {
             }
             for (int b = 0; b < batchSize; b++) {
                 if (control.volatileSpoiler) return;
-                l_benchmark0_0.benchJDKGet(blackhole);
+                l_benchmark0_0.benchJDKGet();
             }
             if (sample) {
                 buffer.add((System.nanoTime() - time) / opsPerInv);
@@ -300,6 +303,7 @@ public final class Benchmark_benchJDKGet_jmhTest {
             control.preTearDown();
 
             if (control.isLastIteration()) {
+                l_benchmark0_0.tearDown();
                 f_benchmark0_0 = null;
             }
             int opsPerInv = control.benchmarkParams.getOpsPerInvocation();
@@ -317,7 +321,7 @@ public final class Benchmark_benchJDKGet_jmhTest {
         result.startTime = System.nanoTime();
         for (int b = 0; b < batchSize; b++) {
             if (control.volatileSpoiler) return;
-            l_benchmark0_0.benchJDKGet(blackhole);
+            l_benchmark0_0.benchJDKGet();
         }
         result.stopTime = System.nanoTime();
         result.realTime = realTime;

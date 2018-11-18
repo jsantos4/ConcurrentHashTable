@@ -8,3 +8,4 @@ inline,main/java/Benchmark/Benchmark.benchCustomGet
 inline,main/java/Benchmark/Benchmark.benchJDKChangePrice
 inline,main/java/Benchmark/Benchmark.benchJDKGet
 inline,main/java/Benchmark/Benchmark.setup
+inline,main/java/Benchmark/Benchmark.tearDown

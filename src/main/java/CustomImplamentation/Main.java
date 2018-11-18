@@ -19,7 +19,6 @@ import java.util.concurrent.TimeUnit;
 
 public class Main {
     static int threads = (Runtime.getRuntime().availableProcessors() > 32) ? 32 : Runtime.getRuntime().availableProcessors();
-    static int vendors = 4;
 
     public static void main(String[] args) {
 
@@ -39,12 +38,11 @@ public class Main {
                 .include(Benchmark.class.getSimpleName())
                 .forks(1)
                 .threads(threads)
-                .warmupIterations(5)
-                .measurementIterations(5)
+                .warmupIterations(10)
+                .measurementIterations(10)
                 .resultFormat(ResultFormatType.CSV)
                 .result("results.csv")
                 .build();
-
 
         try {
             new Runner(options).run();
@@ -60,12 +58,12 @@ public class Main {
         try {
             ExecutorService executor = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
 
-            for(int i = 0; i < threads - vendors; i++) {
+            for(int i = 0; i < threads; i++) {
                 Customer customer = new Customer(i, hashTable);
                 executor.execute(customer);
             }
 
-            for (int j = 0; j < vendors; j++) {
+            for (int j = 0; j < threads/4; j++) {
                 Vendor vendor = new Vendor(j, hashTable);
                 executor.execute(vendor);
             }

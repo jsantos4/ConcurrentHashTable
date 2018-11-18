@@ -8,6 +8,7 @@ import java.util.Random;
 public class Guitar {
     private String name;
     private double price;
+    private Random random = new Random();
 
 
     public Guitar() {
@@ -44,7 +45,6 @@ public class Guitar {
 
     //Randomly change price of item (for vendors)
     public double changePrice() {
-        Random random = new Random();
         int delta = random.nextInt(100);
         if (random.nextInt(2) == 1) {
             price = price + delta;

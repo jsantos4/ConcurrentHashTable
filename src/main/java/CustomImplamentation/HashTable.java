@@ -61,26 +61,16 @@ public class HashTable {
 
                 String key = b.getName();
 
-                if(search(key) != null) {
-
-                }
                 int hashcode = hash(key, table.length);     //Hash key
                 int i = hashcode & table.length - 1;
                 node bucketHead = table[i];
-                /*if (bucketHead != null) {
-                    bucketHead.lock.lockWrite();
-                }*/
                 for (node e = bucketHead; e != null; e = e.next) {    //Run through nodes in index until the end
                     if (key.equals(e.key)) {
                         e.value = b;    //Set node's value
                         count.compareAndSet(count.get(), count.get() + 1);        //Increment hash table counter
-                        //bucketHead.lock.unlockWrite();
                         return;
                     }
                 }
-                /*if (bucketHead != null) {
-                    bucketHead.lock.unlockWrite();
-                }*/
                 node p = new node(key, b, table[i]);    //Create node at index if empty
                 table[i] = p;
                 count.compareAndSet(count.get(), count.get() + 1);
@@ -93,10 +83,14 @@ public class HashTable {
 
     //Changes price of guitar in data structure
     public double changePrice(Guitar guitar) {
-        if (search(guitar.getName()) != null) {
-            guitar.changePrice();
+        for (;;) {
+            if (!resizing.get()) {
+                if (search(guitar.getName()) != null) {
+                    guitar.changePrice();
+                }
+            }
+            return guitar.getPrice();
         }
-        return guitar.getPrice();
     }
 
     //Returns all keys
@@ -127,14 +121,11 @@ public class HashTable {
                 int hashcode = hash(k, table.length);
                 int i = hashcode & table.length - 1;    //Hash key
                 node bucketHead = table[i];
-                //bucketHead.lock.lockRead();
                 for (node e = bucketHead; !isEmpty(e); e = e.next) {
                     if (k.equals(e.key)) {
-                        //bucketHead.lock.unlockRead();
                         return e.value;         //Run through index's nodes and return searched guitar
                     }
                 }
-                //bucketHead.lock.unlockRead();
                 return null;
             }
         }

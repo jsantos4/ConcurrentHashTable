@@ -8,8 +8,9 @@ import java.util.Random;
 public class Customer implements Runnable {
 
     private int id;
-    private ArrayList<String> catalog;
-    private HashTable hashTable;
+    public ArrayList<String> catalog;
+    public HashTable hashTable;
+    private Random random = new Random();
 
     public Customer(int id, HashTable ht) {
         this.id = id;
@@ -18,22 +19,10 @@ public class Customer implements Runnable {
     }
 
     private void shop() {
-        Random random = new Random();
         Guitar guitar = hashTable.search(catalog.get(random.nextInt(catalog.size())));
-        System.out.println("Shopper " + id + " is currently playing the " + guitar.getName());
+        //System.out.println("Shopper " + id + " is currently playing the " + guitar.getName());
     }
     public void run() {
-        /*Random random = new Random();
-        for(;;) {
-            try {
-                Thread.sleep(random.nextInt(5000));
-            } catch (InterruptedException e) {
-                System.out.println("\nShopper " + id + " has left\n");
-                return;
-            }
-
-
-        }*/
         shop();
     }
 }

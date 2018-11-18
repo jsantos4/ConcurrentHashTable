@@ -1,5 +1,0 @@
-Benchmark                                    Mode  Cnt   Score    Error   Units
-Benchmark.Benchmark.benchCustomChangePrice  thrpt    3  10.259 ± 95.543  ops/ms
-Benchmark.Benchmark.benchCustomGet          thrpt    3   3.299 ±  5.676  ops/ms
-Benchmark.Benchmark.benchJDKChangePrice     thrpt    3  15.702 ±  5.088  ops/ms
-Benchmark.Benchmark.benchJDKGet             thrpt    3   5.302 ±  1.499  ops/ms

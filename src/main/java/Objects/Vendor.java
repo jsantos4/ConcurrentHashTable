@@ -8,8 +8,8 @@ import java.util.Random;
 public class Vendor implements Runnable{
 
     private int id;
-    private ArrayList<String> catalog;
-    private HashTable hashTable;
+    public ArrayList<String> catalog;
+    public HashTable hashTable;
 
     public Vendor(int id, HashTable ht) {
         this.id = id;
