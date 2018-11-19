@@ -123,10 +123,10 @@ public class Main {
                 "<body>\n" +
                 "\n" +
                 "<h1>Results</h1>\n" +
-                "<h4>Benchmark results for reads/writes into custom hashtable and jdk's hashmap in ops-per-second<h4>\n" +
+                "<h4>Benchmark results for reads/writes into custom hashtable and jdk's hashmap in ops-per-millisecond<h4>\n" +
                 "<div class=\"BarTable\">\n" +
                 "    <table>\n" +
-                "        <caption>Operations per Second</caption>\n" +
+                "        <caption>Operations per Millisecond</caption>\n" +
                 "        <tr>\n" +
                 "            <td><div class=\"BarLabel\"\">Custom Get</div></td>\n" +
                 "            <td class=\"BarFull\">\n" + getResultBar(scores.get(1)) +

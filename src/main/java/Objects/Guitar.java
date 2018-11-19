@@ -3,13 +3,11 @@ package main.java.Objects;
 import java.text.NumberFormat;
 import java.text.ParseException;
 import java.util.Locale;
-import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Guitar {
     private String name;
     private double price;
-//    private Random random = new Random();
 
 
     public Guitar() {

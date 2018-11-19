@@ -9,11 +9,7 @@ import org.openjdk.jmh.infra.Blackhole;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Random;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 
 @State(Scope.Thread)
 public class Benchmark {
@@ -22,11 +18,10 @@ public class Benchmark {
     private Parser parser = new Parser();
 
     private ExecutorService executor;
-    private static int threads = (Runtime.getRuntime().availableProcessors() > 32) ? 32 : Runtime.getRuntime().availableProcessors();
+    private static int threads = (Runtime.getRuntime().availableProcessors() > 8) ? 8 : Runtime.getRuntime().availableProcessors();
     private ArrayList<Vendor> vendors = new ArrayList<>();
     private ArrayList<Customer> customers = new ArrayList<>();
     private ArrayList<String> catalog = new ArrayList<>();
-    private Random random = new Random();
 
     @Setup
     public void setup() {
@@ -61,6 +56,9 @@ public class Benchmark {
             executor.execute(customer);
 
         }
+        for (Vendor vendor : vendors) {
+            executor.execute(vendor);
+        }
         executor.shutdown();
     }
 
@@ -69,16 +67,25 @@ public class Benchmark {
     @OutputTimeUnit(TimeUnit.MILLISECONDS)
     public void benchJDKGet() {
         executor = Executors.newFixedThreadPool(customers.size());
+        Runnable v = new Runnable() {
+            @Override
+            public void run() {
+                Guitar guitar = hashMap.get(catalog.get(ThreadLocalRandom.current().nextInt(catalog.size())));
+                hashMap.put(guitar.getName(), guitar);
+            }
+        };
         Runnable c = new Runnable() {
             @Override
             public void run() {
-                 Guitar guitar = hashMap.get(catalog.get(random.nextInt(catalog.size())));
+                Guitar guitar = hashMap.get(catalog.get(ThreadLocalRandom.current().nextInt(catalog.size())));
             }
         };
 
         for (Customer customer : customers) {
             executor.execute(c);
-
+        }
+        for (Vendor vendor : vendors) {
+            executor.execute(v);
         }
         executor.shutdown();
     }
@@ -89,8 +96,11 @@ public class Benchmark {
     public void benchCustomChangePrice() {
         executor = Executors.newFixedThreadPool(threads);
         for (Vendor vendor : vendors) {
-            executor.execute(vendor);
+            executor.execute(new Customer(vendors.indexOf(vendor), hashTable));
+        }
 
+        for (Customer customer : customers) {
+            executor.execute(new Vendor(customers.indexOf(customer), hashTable));
         }
         executor.shutdown();
     }
@@ -103,28 +113,24 @@ public class Benchmark {
         Runnable v = new Runnable() {
             @Override
             public void run() {
-                Guitar guitar = hashMap.get(catalog.get(random.nextInt(catalog.size())));
+                Guitar guitar = hashMap.get(catalog.get(ThreadLocalRandom.current().nextInt(catalog.size())));
                 hashMap.put(guitar.getName(), guitar);
             }
         };
+        Runnable c = new Runnable() {
+            @Override
+            public void run() {
+                Guitar guitar = hashMap.get(catalog.get(ThreadLocalRandom.current().nextInt(catalog.size())));
+            }
+        };
 
-        for (Vendor vendor : vendors) {
+        for (Customer customer : customers) {
             executor.execute(v);
+        }
+        for (Vendor vendor : vendors) {
+            executor.execute(c);
         }
         executor.shutdown();
     }
 
-    @TearDown
-    public void tearDown() {
-        for (Customer customer : customers) {
-            customer.hashTable = null;
-            customer.catalog = null;
-        }
-
-        for (Vendor vendor : vendors) {
-            vendor.hashTable = null;
-            vendor.catalog = null;
-        }
-
-    }
 }

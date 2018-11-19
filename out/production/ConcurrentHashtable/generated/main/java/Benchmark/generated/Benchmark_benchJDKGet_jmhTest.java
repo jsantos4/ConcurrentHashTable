@@ -94,7 +94,6 @@ public final class Benchmark_benchJDKGet_jmhTest {
             }
 
             if (control.isLastIteration()) {
-                l_benchmark0_0.tearDown();
                 f_benchmark0_0 = null;
             }
             res.allOps += res.measuredOps;
@@ -162,7 +161,6 @@ public final class Benchmark_benchJDKGet_jmhTest {
             }
 
             if (control.isLastIteration()) {
-                l_benchmark0_0.tearDown();
                 f_benchmark0_0 = null;
             }
             res.allOps += res.measuredOps;
@@ -234,7 +232,6 @@ public final class Benchmark_benchJDKGet_jmhTest {
             }
 
             if (control.isLastIteration()) {
-                l_benchmark0_0.tearDown();
                 f_benchmark0_0 = null;
             }
             res.allOps += res.measuredOps * batchSize;
@@ -303,7 +300,6 @@ public final class Benchmark_benchJDKGet_jmhTest {
             control.preTearDown();
 
             if (control.isLastIteration()) {
-                l_benchmark0_0.tearDown();
                 f_benchmark0_0 = null;
             }
             int opsPerInv = control.benchmarkParams.getOpsPerInvocation();
