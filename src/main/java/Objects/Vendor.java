@@ -3,7 +3,7 @@ package main.java.Objects;
 import main.java.CustomImplamentation.*;
 
 import java.util.ArrayList;
-import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Vendor implements Runnable{
 
@@ -18,22 +18,21 @@ public class Vendor implements Runnable{
     }
 
     private void changeGuitarPrice() {
-        Random random = new Random();
-        Guitar guitar = hashTable.search(catalog.get(random.nextInt(catalog.size())));
+        Guitar guitar = hashTable.search(catalog.get(ThreadLocalRandom.current().nextInt(catalog.size())));
         double oldPrice = guitar.getPrice();
         double newPrice = hashTable.changePrice(guitar);
-        if (newPrice > oldPrice)
+        /*if (newPrice > oldPrice)
             System.out.println("Vendor " + id + " raised the price of the " + guitar.getName() + " by $" + (newPrice - oldPrice));
         else
             System.out.println("Vendor " + id + " lowered the price of the " + guitar.getName() + " by $" + (oldPrice - newPrice));
+        */
 
     }
 
     public void run() {
-        /*Random random = new Random();
-        for(;;) {
+        /*for(;;) {
             try {
-                Thread.sleep(random.nextInt(5000));
+                Thread.sleep(ThreadLocalRandom.current().nextInt(5000));
             } catch (InterruptedException e) {
                 System.out.println("\nVendor " + id + " has left\n");
                 return;

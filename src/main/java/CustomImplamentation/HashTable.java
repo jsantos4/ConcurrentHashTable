@@ -15,23 +15,22 @@ public class HashTable {
         String key;
         Guitar value;
         node next;
-        //ReadWriteLock lock;
         node(String key, Guitar value, node next) {
             this.key = key;
             this.value = value;
             this.next = next;
-            //lock = new ReadWriteLock();
         }
     }
 
     //local variables
-    private static node[] table;
+    private node[] table;
+    private Object[] locks;
     private static final int initialcap = 4;
     private AtomicInteger count;
-    //private ReadWriteLock tableLock = new ReadWriteLock();
     private AtomicBoolean resizing = new AtomicBoolean(false);
 
     public HashTable() {
+        locks = new Object[initialcap];
         table = new node[initialcap];
         count = new AtomicInteger(0);
     }
@@ -85,8 +84,12 @@ public class HashTable {
     public double changePrice(Guitar guitar) {
         for (;;) {
             if (!resizing.get()) {
-                if (search(guitar.getName()) != null) {
-                    guitar.changePrice();
+                int hashcode = hash(guitar.getName(), table.length);
+                int i = hashcode & table.length - 1;
+                synchronized (locks[i]) {
+                    if (search(guitar.getName()) != null) {
+                        guitar.changePrice();
+                    }
                 }
             }
             return guitar.getPrice();
@@ -133,33 +136,34 @@ public class HashTable {
 
     //doubles table size when three quarters load is reached
     private void resize() {
-        //tableLock.lockWrite();
         node[] newTable = new node[table.length*2];     //Create new table with twice size of original
+        Object[] newLocks = new Object[table.length*2];
+        for (int i = 0; i < newLocks.length; i++) {
+            newLocks[i] = new Object();
+        }
         //Can't use put, essentially had to rewrite and tweak
         //the put method to remap all elements of the old table
         for (int i = 0; i < table.length; i++) {
             node bucketHead = table[i];
-            if (bucketHead != null)
-                //bucketHead.lock.lockWrite();
-            for (node e = bucketHead; e != null; e = e.next) {        //Run through table
-                int hc = hash(e.key, newTable.length);      //Rehash node
-                if (newTable[hc] == null){          //If index is empty
-                    node p = new node(e.key, e.value, newTable[hc]);
-                    newTable[hc] = p;           //Place node in index
-                    //bucketHead.lock.unlockWrite();
-                } else {        //If not
-                    node f = newTable[hc];
-                    while(!isEmpty(f)) {
-                        f = f.next;     //Run through nodes(bucket)
+            if (bucketHead != null) {
+                for (node e = bucketHead; e != null; e = e.next) {        //Run through table
+                    int hc = hash(e.key, newTable.length);      //Rehash node
+                    if (newTable[hc] == null) {          //If index is empty
+                        node p = new node(e.key, e.value, newTable[hc]);
+                        newTable[hc] = p;           //Place node in index
+                    } else {        //If not
+                        node f = newTable[hc];
+                        while (!isEmpty(f)) {
+                            f = f.next;     //Run through nodes(bucket)
+                        }
+                        node p = new node(e.key, e.value, f);       //Place node at end of bucket
+                        f = p;
                     }
-                    node p = new node(e.key, e.value, f);       //Place node at end of bucket
-                    f = p;
-                    //bucketHead.lock.unlockWrite();
                 }
             }
         }
+        locks = newLocks;
         table = newTable;       //Set table to new table
-        //tableLock.unlockWrite();
 
     }
 }

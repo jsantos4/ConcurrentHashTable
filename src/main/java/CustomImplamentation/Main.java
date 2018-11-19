@@ -34,6 +34,7 @@ public class Main {
             System.out.println("Could not reach web page.");
         }
 
+
         final Options options = new OptionsBuilder()
                 .include(Benchmark.class.getSimpleName())
                 .forks(1)
@@ -52,13 +53,15 @@ public class Main {
 
 
         buildHTML();
+        //run(guitars);
+
     }
 
     private static void run(HashTable hashTable) {
         try {
             ExecutorService executor = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
 
-            for(int i = 0; i < threads; i++) {
+            for(int i = 0; i < (threads/4)*3; i++) {
                 Customer customer = new Customer(i, hashTable);
                 executor.execute(customer);
             }
@@ -68,7 +71,7 @@ public class Main {
                 executor.execute(vendor);
             }
 
-            if (executor.awaitTermination(15, TimeUnit.SECONDS)) {
+            if (executor.awaitTermination(30, TimeUnit.SECONDS)) {
                 System.out.println("\nStores are now closed!\n");
             } else {
                 executor.shutdownNow();
@@ -164,7 +167,6 @@ public class Main {
         String bar = "<img src= \"rec.png\" height = \"12\" alt=\"" + String.valueOf(score) + "\" width=\"" + String.valueOf(scoreAW) +
                 "\" />\n" +
                 "<p>" + String.valueOf(score) + "</p>";
-
 
         return bar;
     }
